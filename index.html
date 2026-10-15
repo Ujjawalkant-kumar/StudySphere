@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="StudySphere student study planner and progress dashboard">
+<title>StudySphere | Study Dashboard</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar"><a class="brand" href="#"><span class="logo">S</span> StudySphere</a>
+<p class="label">WORKSPACE</p><a class="nav active" href="#overview">⌂ &nbsp; Overview</a><a class="nav" href="#tasks">✓ &nbsp; My Tasks</a><a class="nav" href="#subjects">▦ &nbsp; Subjects</a>
+<div class="tip"><span>✦</span><h3>Small steps add up.</h3><p>Stay consistent, focus on one task at a time, and celebrate your progress.</p></div>
+<small class="saved">● Your tasks are saved on this device</small></aside>
+<main id="overview">
+<header><div><p class="eyebrow" id="todayLabel">YOUR STUDY SPACE</p><h1>Good to see you! <span>✦</span></h1><p class="muted">Make today count, one focused session at a time.</p></div><div class="date" id="currentDate">Today</div></header>
+<section class="hero"><div><p class="eyebrow">YOUR DAILY JOURNEY</p><h2>Progress over<br>perfection.</h2><p>Every task you complete brings you closer to your goals.</p><a href="#tasks" class="hero-button">View my tasks →</a></div><div class="hero-art" aria-hidden="true"><div class="circle"></div><div class="book"><i></i><i></i><i></i></div><b>✦</b></div></section>
+<section class="stats">
+<article><div class="stat-head">✓ <small>TOTAL TASKS</small></div><strong id="totalTasks">0</strong><p>Tasks in your plan</p></article>
+<article><div class="stat-head green">✦ <small>COMPLETED</small></div><strong id="completedTasks">0</strong><p>Tasks completed</p></article>
+<article><div class="stat-head orange">◷ <small>FOCUS TIME</small></div><strong><span id="focusHours">0</span><small> hrs</small></strong><p>Planned study time</p></article>
+<article><div class="stat-head blue">↗ <small>PROGRESS</small></div><strong><span id="progressPercent">0</span><small>%</small></strong><div class="bar"><span id="progressBar"></span></div></article>
+</section>
+<div class="columns">
+<section class="panel" id="tasks"><div class="panel-head"><div><p class="eyebrow">STAY ON TRACK</p><h2>Today's tasks</h2></div><button class="link-button" id="clearCompleted">Clear completed</button></div>
+<form id="taskForm"><input id="taskInput" type="text" placeholder="What do you want to study?" maxlength="90" required aria-label="Task name">
+<select id="subjectInput" aria-label="Subject"><option>General</option><option>DSA</option><option>Web Development</option><option>Java</option><option>College</option></select>
+<select id="durationInput" aria-label="Duration"><option value="30">30 min</option><option value="45">45 min</option><option value="60">1 hour</option><option value="90">1.5 hours</option><option value="120">2 hours</option></select><button class="primary" type="submit">+ Add task</button></form>
+<div class="filter-row"><span id="taskCountLabel">Your plan, your pace</span><div class="filters"><button class="filter selected" data-filter="all">All</button><button class="filter" data-filter="active">Pending</button><button class="filter" data-filter="completed">Done</button></div></div>
+<div id="taskList"></div><div id="emptyState" class="empty"><div>✎</div><h3>Your study plan starts here</h3><p>Add your first task above and build a productive day.</p></div></section>
+<div class="right-col"><section class="panel"><div class="panel-head"><div><p class="eyebrow">KEEP GOING</p><h2>Daily progress</h2></div><span class="star">✧</span></div><div class="ring" id="progressRing"><div><strong id="ringPercent">0%</strong><small>completed</small></div></div><p class="progress-message" id="progressMessage">Add a task to get started. You've got this!</p></section>
+<section class="panel" id="subjects"><div class="panel-head"><div><p class="eyebrow">YOUR LEARNING</p><h2>Subject overview</h2></div></div><div id="subjectList"><p class="muted small">Add tasks to see your subjects here.</p></div><p class="muted small">Subjects update automatically as you add tasks.</p></section></div></div>
+<footer>Made for better study habits <span>✦</span> StudySphere</footer>
+</main></div><script src="script.js"></script></body></html>
